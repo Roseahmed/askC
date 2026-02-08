@@ -21,7 +21,7 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout repository
+            - name: Checkout
               uses: actions/checkout@v4
 
             - name: Setup Bun
@@ -35,14 +35,8 @@ jobs:
             - name: Build project
               run: bun run build
 
-            - name: Add CNAME if custom domain exists
-              run: |
-                  if [ -n "${{ secrets.CUSTOM_DOMAIN }}" ]; then
-                    echo "${{ secrets.CUSTOM_DOMAIN }}" > dist/CNAME
-                    echo "Added CNAME: ${{ secrets.CUSTOM_DOMAIN }}"
-                  else
-                    echo "No custom domain provided, skipping CNAME."
-                  fi
+            - name: Add CNAME for root domain
+              run: echo "askc.in" > dist/CNAME
 
             - name: Setup Pages
               uses: actions/configure-pages@v4
@@ -55,3 +49,5 @@ jobs:
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
+              with:
+                  enablement: true
