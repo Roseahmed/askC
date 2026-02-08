@@ -3,9 +3,14 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Ensures relative pathing
+  // Custom domains at the root level need '/'
+  base: "/",
   build: {
-    assetsDir: "static", // Changing 'assets' to 'static' avoids GitHub's folder filters
     outDir: "dist",
+    assetsDir: "assets",
+    // Ensures the module scripts are strictly formatted
+    modulePreload: {
+      polyfill: true,
+    },
   },
 });
