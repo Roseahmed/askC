@@ -4,14 +4,32 @@ export function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <h1 className="text-xl font-bold">AskC</h1>
+        {/* Logo Section */}
+        <a href="/" className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="AskC Logo"
+            className="h-10 w-auto object-contain"
+          />
+          <span className="text-xl font-bold tracking-tight">AskC</span>
+        </a>
 
-        <nav className="hidden gap-6 md:flex">
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#courses">Courses</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+        <nav className="hidden gap-6 md:flex font-medium text-sm text-gray-600">
+          <a href="#services" className="hover:text-black transition-colors">
+            Services
+          </a>
+          <a href="#process" className="hover:text-black transition-colors">
+            Process
+          </a>
+          <a href="#courses" className="hover:text-black transition-colors">
+            Courses
+          </a>
+          <a href="#about" className="hover:text-black transition-colors">
+            About
+          </a>
+          <a href="#contact" className="hover:text-black transition-colors">
+            Contact
+          </a>
         </nav>
 
         <Button asChild>
