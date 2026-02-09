@@ -11,4 +11,7 @@ export class Config {
   orgFacebookURL = "/";
   orgLinkedinURL = "/";
   orgInstagramURL = "/";
+
+  // CONTACT CTA
+  phoneWhatsAppCTA = "+919706736327";
 }
