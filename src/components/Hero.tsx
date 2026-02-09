@@ -57,7 +57,7 @@ export function Hero() {
       <Reveal>
         <div className="mx-auto max-w-5xl px-6 text-center">
           <h1 className="mb-6 text-4xl font-extrabold md:text-5xl leading-tight">
-            AskC – Education & Career Consulting
+            ASKC – Education & Career Consulting
           </h1>
 
           <p className="mb-10 text-lg text-blue-100">

@@ -5,13 +5,13 @@ export function About() {
     <section id="about" className=" py-24 px-6 bg-slate-50">
       <Reveal>
         <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-8">
-          About AskC
+          About ASKC
         </h1>
       </Reveal>
 
       <Reveal>
         <p className="text-lg text-slate-700 text-center max-w-4xl mx-auto mb-12 leading-relaxed">
-          At <span className="font-semibold">AskC</span>, we specialize in
+          At <span className="font-semibold">ASKC</span>, we specialize in
           helping students from all across India secure admissions in top
           universities in Bangalore. Our experienced counselors guide each
           student through the application process, course selection, and
@@ -51,7 +51,7 @@ export function About() {
         <div className="mt-12 max-w-4xl mx-auto text-center">
           <p className="text-slate-700 text-lg leading-relaxed">
             With years of experience and strong connections with Bangalore
-            universities, AskC is your trusted partner for securing admission
+            universities, ASKC is your trusted partner for securing admission
             and starting your academic journey in Bangalore.
           </p>
         </div>
