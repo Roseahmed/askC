@@ -60,7 +60,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3 text-indigo-200/70 text-sm">
               <li>
                 <a
-                  href="/"
+                  href="#"
                   className="hover:text-emerald-400 transition-colors"
                 >
                   Home
