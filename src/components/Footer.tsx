@@ -1,53 +1,88 @@
 import { Reveal } from "../components/Reveal";
 import {
   FaFacebookF,
-  FaTwitter,
   FaLinkedinIn,
   FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 
 export function Footer() {
   return (
-    <footer className="bg-indigo-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-6 grid gap-10 md:grid-cols-4">
-        {/* Branding */}
+    <footer className="bg-indigo-950 text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-4">
+        {/* Column 1: Branding & Mission */}
         <Reveal>
-          <div>
-            <h2 className="text-2xl font-bold mb-4">AskC</h2>
-            <p className="text-indigo-200">
-              Education & Career Consulting. Helping students achieve their
-              dreams in Bangalore universities.
+          <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3">
+              {/* This SVG filter trick makes any logo pure white */}
+              <img src="/logo.png" alt="ASKC Logo" className="h-10 w-auto" />
+              <span className="text-2xl font-bold tracking-tighter uppercase">
+                ASKC
+              </span>
+            </div>
+            <p className="text-indigo-200/80 leading-relaxed text-sm">
+              Empowering students through expert education consultancy. We
+              bridge the gap between academic ambition and global opportunities
+              in Bangalore's elite universities.
             </p>
+            <div className="flex gap-4 mt-2">
+              <a
+                href="#"
+                className="p-2 bg-indigo-900 rounded-lg hover:bg-emerald-500 transition-all duration-300"
+              >
+                <FaFacebookF size={16} />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-indigo-900 rounded-lg hover:bg-emerald-500 transition-all duration-300"
+              >
+                <FaLinkedinIn size={16} />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-indigo-900 rounded-lg hover:bg-emerald-500 transition-all duration-300"
+              >
+                <FaInstagram size={16} />
+              </a>
+            </div>
           </div>
         </Reveal>
 
-        {/* Quick Links */}
+        {/* Column 2: Quick Navigation */}
         <Reveal>
           <div>
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="flex flex-col gap-2">
+            <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
+            <ul className="flex flex-col gap-3 text-indigo-200/70 text-sm">
               <li>
-                <a href="/" className="hover:text-emerald-400 transition">
+                <a
+                  href="/"
+                  className="hover:text-emerald-400 transition-colors"
+                >
                   Home
                 </a>
               </li>
               <li>
                 <a
                   href="#courses"
-                  className="hover:text-emerald-400 transition"
+                  className="hover:text-emerald-400 transition-colors"
                 >
                   Courses
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-emerald-400 transition">
+                <a
+                  href="#about"
+                  className="hover:text-emerald-400 transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
-                  className="hover:text-emerald-400 transition"
+                  href="#courses"
+                  className="hover:text-emerald-400 transition-colors"
                 >
                   Contact
                 </a>
@@ -56,43 +91,86 @@ export function Footer() {
           </div>
         </Reveal>
 
-        {/* Contact Info */}
+        {/* Column 3: Important Links */}
         <Reveal>
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
-            <p className="text-indigo-200 mb-2">
-              123 Education Street, Bangalore
-            </p>
-            <p className="text-indigo-200 mb-2">+91 98765 43210</p>
-            <p className="text-indigo-200">contact@askc.com</p>
+            <h3 className="text-white font-bold mb-6 text-lg">Company</h3>
+            <ul className="flex flex-col gap-3 text-indigo-200/70 text-sm">
+              <li>
+                <a
+                  href="#about"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#process"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Our Process
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Contact Support
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/privacy"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
           </div>
         </Reveal>
 
-        {/* Social Media */}
+        {/* Column 4: Reach Us */}
         <Reveal>
           <div>
-            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-emerald-400 transition">
-                <FaFacebookF />
-              </a>
-              <a href="#" className="hover:text-emerald-400 transition">
-                <FaTwitter />
-              </a>
-              <a href="#" className="hover:text-emerald-400 transition">
-                <FaLinkedinIn />
-              </a>
-              <a href="#" className="hover:text-emerald-400 transition">
-                <FaInstagram />
-              </a>
+            <h3 className="text-white font-bold mb-6 text-lg">Get In Touch</h3>
+            <div className="flex flex-col gap-4 text-indigo-200/70 text-sm">
+              <div className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-emerald-500 mt-1 shrink-0" />
+                <span>
+                  MG Road, Central Bangalore,
+                  <br />
+                  Karnataka 560001
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-emerald-500 shrink-0" />
+                <span>+91 98765 43210</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="text-emerald-500 shrink-0" />
+                <a href="mailto:contact@askc.in" className="hover:text-white">
+                  support@askc.in
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>
       </div>
 
-      {/* Bottom copyright */}
-      <div className="mt-12 border-t border-indigo-800 pt-6 text-center text-indigo-200 text-sm">
-        © {new Date().getFullYear()} AskC – All Rights Reserved.
+      {/* Copyright Bar */}
+      <div className="mt-16 pt-8 border-t border-indigo-900/50">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-indigo-400 text-xs">
+            © {new Date().getFullYear()} ASKC Educational Consultancy. All
+            Rights Reserved.
+          </p>
+          <p className="text-indigo-500 text-[10px] uppercase tracking-widest">
+            Built for Academic Excellence
+          </p>
+        </div>
       </div>
     </footer>
   );
