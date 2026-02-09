@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { Button } from "../components/ui/button";
-import { Reveal } from "../components/Reveal";
+import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/Reveal";
 
 const images = ["/hero/hero1.png", "/hero/hero2.png", "/hero/hero3.png"];
 

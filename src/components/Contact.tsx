@@ -1,8 +1,8 @@
-import { Reveal } from "../components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
-import { Map } from "./Map";
+import { Map } from "@/components/Map";
 import { Config } from "../config/config";
 
 export function Contact() {

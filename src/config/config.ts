@@ -13,5 +13,5 @@ export class Config {
   orgInstagramURL = "/";
 
   // CONTACT CTA
-  phoneWhatsAppCTA = "+919706736327";
+  phoneWhatsAppCTA = "+919876543210";
 }
